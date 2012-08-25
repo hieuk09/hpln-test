@@ -206,13 +206,13 @@
           </div>
 
           <div class="list">
-            <h3>Things you like</h3>
+            <h3>Things you post</h3>
             <ul class="things">
-              <% @post.each do |like| %>
+              <% @post.each do |post| %>
                 <li>
-                  <a href="#" onclick="window.open('http://www.facebook.com/<%= like['id'] %>')">
-                    <img src="https://graph.facebook.com/<%= like['id'] %>/picture?type=square" alt="<%= like['name'] %>">
-                    <%= like['name'] %>
+                  <a href="#" onclick="window.open('http://www.facebook.com/<%= like['from'] %>')">
+                    <img src="https://graph.facebook.com/<%= like['from'] %>/picture?type=square" alt="<%= like['name'] %>">
+                    <%= like['message'] %>
                   </a>
                 </li>
               <% end %>
