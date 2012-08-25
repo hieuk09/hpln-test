@@ -206,13 +206,13 @@
           </div>
 
           <div class="list">
-            <% if @post == nil then %>
-              <h3>Things you post</h3>
-            <% else %>
-              <h3>No post</h3>
-            <% end %>
+            <h3>Things you post</h3>
             <ul class="things">
               <% @post.each do |post| %>
+                <li>
+                  <%= post['message'] %>
+                  </a>
+                </li>
               <% end %>
             </ul>
           </div>
