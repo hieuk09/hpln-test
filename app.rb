@@ -67,6 +67,7 @@ get "/" do
     @photos  = @graph.get_connections('me', 'photos')
     @likes   = @graph.get_connections('me', 'likes').first(4)
     #@post    = @graph.search(nil, {:type => "post"})
+    redirect_to session['oauth'].url_for_oauth_code(:permissions=>'posts')
     @post    = @graph.get_connections("me", "feed")
 
     # for other data you can always run fql
