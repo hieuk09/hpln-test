@@ -213,12 +213,6 @@
             <% end %>
             <ul class="things">
               <% @post.each do |post| %>
-                <li>
-                  <a href="#" onclick="window.open('http://www.facebook.com/<%= post['from'] %>')">
-                    <img src="https://graph.facebook.com/<%= post['from'] %>/picture?type=square" alt="<%= post['name'] %>">
-                    <%= post['message'] %>
-                  </a>
-                </li>
               <% end %>
             </ul>
           </div>
