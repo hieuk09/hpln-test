@@ -210,7 +210,7 @@
             <ul class="things">
               <% @post.each do |post| %>
                 <li>
-                  <%= post['message'] %>
+                  <%= post.to_s %>
                   </a>
                 </li>
               <% end %>
