@@ -206,7 +206,11 @@
           </div>
 
           <div class="list">
-            <h3><%= "Things you post" if @post == nil %></h3>
+            <% if @post == nil then %>
+              <h3>Things you post</h3>
+            <% else %>
+              <h3>No post</h3>
+            <% end %>
             <ul class="things">
               <% @post.each do |post| %>
                 <li>
