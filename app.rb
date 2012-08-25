@@ -67,8 +67,7 @@ get "/" do
     @photos  = @graph.get_connections('me', 'photos')
     @likes   = @graph.get_connections('me', 'likes').first(4)
     #@post    = @graph.search(nil, {:type => "post"})
-    redirect_to session['oauth'].url_for_oauth_code(:permissions=>'posts')
-    @post    = @graph.get_connections("me", "feed")
+    @post    = @graph.get_connections("me", "posts")
 
     # for other data you can always run fql
     @friends_using_app = @graph.fql_query("SELECT uid, name, is_app_user, pic_square FROM user WHERE uid in (SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1")
