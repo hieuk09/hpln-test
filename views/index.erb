@@ -206,7 +206,7 @@
           </div>
 
           <div class="list">
-            <h3>Things you post</h3>
+            <h3><%= "Things you post" if @post == nil %></h3>
             <ul class="things">
               <% @post.each do |post| %>
                 <li>
