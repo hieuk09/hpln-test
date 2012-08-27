@@ -183,10 +183,10 @@
             <ul class="things">
               <% @post.each do |post| %>
                 <li>
-                  <%= post["id"] %> - 
                   <%= post["story"] %>
                 </li>
               <% end %>
+              <li> @permission.to_s </li>
             </ul>
           </div>
         </section>
