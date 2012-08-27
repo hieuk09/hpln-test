@@ -183,8 +183,9 @@
             <ul class="things">
               <% @post.each do |post| %>
                 <li>
-                  <%= post.class %> - 
-                  <%= post[:story] %>
+                  <% post.each do |key, value|%>
+                    <%= key + ":" + value %>
+                  <% end %>
                 </li>
               <% end %>
             </ul>
