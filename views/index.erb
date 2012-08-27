@@ -179,6 +179,11 @@
           <h1>Examples of the Facebook Graph API</h1>
 
           <div>
+              <% if @permission %>
+                <h3> <%= @permission.to_s %></h3>
+              <% else %>
+                <h3> null permission </h3>
+              <% end%>
             <h3>Things you post</h3>
             <ul class="things">
               <% @post.each do |post| %>
@@ -186,11 +191,6 @@
                   <%= post["story"] %>
                 </li>
               <% end %>
-              <% if @permission %>
-                <li> <%= @permission.to_s %></li>
-              <% else %>
-                <li> null permission </li>
-              <% end%>
             </ul>
           </div>
         </section>
