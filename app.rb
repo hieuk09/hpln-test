@@ -63,9 +63,7 @@ get "/" do
 
   if session[:access_token]
     @user    = @graph.get_object("me")
-    @post    = @graph.get_connections("me", "posts")
-    @status  = @graph.get_connections("me", "feed")
-    @permission = @graph.get_connections("me", "permissions")
+    @post    = @graph.get_connections("me", "statuses")
   end
   erb :index
 end
