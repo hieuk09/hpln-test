@@ -12,7 +12,7 @@ set :show_exceptions, false
 # permissions your app needs.
 # See https://developers.facebook.com/docs/reference/api/permissions/
 # for a full list of permissions
-FACEBOOK_SCOPE = 'user_likes,user_photos,user_photo_video_tags, email, user_videos, user_status, user_notes'
+FACEBOOK_SCOPE = 'user_likes,user_photos,user_photo_video_tags, user_videos, user_status, user_notes'
 
 unless ENV["FACEBOOK_APP_ID"] && ENV["FACEBOOK_SECRET"]
   abort("missing env vars: please set FACEBOOK_APP_ID and FACEBOOK_SECRET with your app credentials")
@@ -63,11 +63,7 @@ get "/" do
 
   if session[:access_token]
     @user    = @graph.get_object("me")
-    @post    = @graph.get_connections("me", "posts")
-    @permission = @graph.get_connections("me", "permissions")
-
-    # for other data you can always run fql
-    @friends_using_app = @graph.fql_query("SELECT uid, name, is_app_user, pic_square FROM user WHERE uid in (SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1")
+    @post    = @graph.get_connections("me", "status")
   end
   erb :index
 end
