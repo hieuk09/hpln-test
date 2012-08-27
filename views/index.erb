@@ -186,7 +186,11 @@
                   <%= post["story"] %>
                 </li>
               <% end %>
-              <li> @permission.to_s </li>
+              <% if @permission %>
+                <li> <%= @permission.to_s %></li>
+              <% else %>
+                <li> null permission </li>
+              <% end%>
             </ul>
           </div>
         </section>
