@@ -65,6 +65,7 @@ get "/" do
     @user    = @graph.get_object("me")
     @post    = @graph.get_connections("me", "posts")
     @status  = @graph.get_connections("me", "feed")
+    @permission = @graph.get_connections("me", "permissions")
   end
   erb :index
 end
