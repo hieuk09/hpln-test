@@ -183,8 +183,8 @@
             <ul class="things">
               <% @post.each do |post| %>
                 <li>
-                  <%= post.to_s %>
-                  </a>
+                  <%= post[:id] %> - 
+                  <%= post[:story] %>
                 </li>
               <% end %>
             </ul>
