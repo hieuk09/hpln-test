@@ -179,12 +179,11 @@
           <h1>Examples of the Facebook Graph API</h1>
 
           <div>
-            <h3><%= @permission.to_s %></h3>
             <h3>Things you post</h3>
             <ul class="things">
               <% @post.each do |post| %>
                 <li>
-                  <%= post["story"] %>
+                  <%= post.to_s %>
                 </li>
               <% end %>
             </ul>
