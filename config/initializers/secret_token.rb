@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-FbTest::Application.config.secret_token = '193ec35e596f630d0d7330e345ed8a3886bdfd497056df0e97e13f1ec8ae71b0c8d021c6aafeb7250f45ab17592446a003b76e7e2aad286f2656bff4e4597d89'
+HplnApp::Application.config.secret_token = '47bc6f9ea32dd49eac204dd04fad7e9e01d48744b7701ea942075a213268f3348f015a8d6b2fa7096f4999db4f6ccbf333c9a528c164277375d3c549efc5ec63'

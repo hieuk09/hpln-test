@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-FbTest::Application.load_tasks
+HplnApp::Application.load_tasks

@@ -1,4 +1,6 @@
-FbTest::Application.routes.draw do
+HplnApp::Application.routes.draw do
+
+  resource :post
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
