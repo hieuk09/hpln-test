@@ -1,6 +1,18 @@
 HplnApp::Application.routes.draw do
 
-  resource :post
+  #resource :post
+  #resource :homes
+
+  controller :home do
+    get 'index' => :index
+    post '/' => :home
+    get 'close' => :close
+    get 'sign_out' => :sign_out
+    get 'auth/facebook' => :authenticate
+    get 'auth/facebook/callback' => :callback
+  end
+
+  root to: "home#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(:version => 20120827185328) do
 
   create_table "comments", :force => true do |t|
-    t.string   "message"
+    t.text     "message"
     t.integer  "post_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "posts", :force => true do |t|
-    t.string   "message"
+    t.text     "message"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
