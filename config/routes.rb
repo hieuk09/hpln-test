@@ -4,7 +4,7 @@ HplnApp::Application.routes.draw do
   #resource :homes
 
   controller :home do
-    get 'index' => :index
+    get '/' => :index
     post '/' => :home
     get 'close' => :close
     get 'sign_out' => :sign_out
